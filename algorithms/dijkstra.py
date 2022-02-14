@@ -27,13 +27,10 @@ def dijkstra(graph,src,dest):
                     heappush(min_heap,(node_data[j]['cost'],j))
         heapify(min_heap)
         current_node = min_heap[0][1] # 0 = min element, 1 = neighbor
+    
     print("Shortest Distance: " + str(node_data[dest]['cost']))
     print("Shortest Path: " + str(node_data[dest]['pred'] + list(dest)))
                     
-
-
-        
-
 if __name__ == "__main__":
     graph = {
         'A':{'B':2,'C':4},
